@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragment :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/me.css">
+    <script src="../static/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+    <title>关于我</title>
+</head>
+<body>
+<!--顶部导航-->
+    <nav th:replace="_fragment :: menu(6)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="index.html" class="m-item item m-mobile-hide"><i class="mini home icon"></i>首页</a>
+                <a href="types.html" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
+                <a href="tags.html" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
+                <a href="archives.html" class="m-item item m-mobile-hide"><i class="mini clone icon"></i>归档</a>
+                <a href="about.html" class="active m-item item m-mobile-hide"><i class="mini info icon"></i>关于我</a>
+                <a href="friends.html" class="m-item item m-mobile-hide"><i class="mini user icon"></i>友链</a>
+                <div class="right m-item item m-mobile-hide">
+                    <div class="ui icon inverted transparent input">
+                        <input class="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="ui menu toggle black icon button m-right-top m-mobile-hide m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+<!--中间内容-->
+    <div class="m-container m-padded-tb-big">
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <div class="eleven wide column">
+                    <div class="ui segment">
+                        <img src="https://unsplash.it/800/600?image=1005" alt="" th:src="@{/images/bg.jpg}" class="ui rounded image">
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <div class="top attached segment">
+                        <div class="ui header">关于我</div>
+                    </div>
+                    <div class="ui attached segment">
+                        <p class="m-text">任嘉诚,一个大二软件工程学生,折腾在0和1世界的学生;一个终身学习者,誓将学习无限循环,希望可以结实可以共同成长的小伙伴</p>
+                        <p class="m-text">热爱编程,喜欢折腾,正在探索高效学习编程技术的方法...</p>
+                    </div>
+                    <div class="ui attached segment">
+                        <div class="ui orange basic left pointing label">编程</div>
+                        <div class="ui orange basic left pointing label">思考</div>
+                        <div class="ui orange basic left pointing label">写作</div>
+                        <div class="ui orange basic left pointing label">运动</div>
+                    </div>
+                    <div class="ui attached segment">
+                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Java</div>
+                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Web</div>
+                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Msql</div>
+                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Vue</div>
+                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Node</div>
+                    </div>
+                    <div class="ui bottom attached segment">
+                        <a href="https://github.com/819879012/" class="ui circular icon button" target="_blank"><i class="github icon"></i></a>
+                        <a href="#" class="ui wechat circular icon button" data-position="bottom center"><i class="wechat icon"></i></a>
+                        <a href="#" class="ui qq circular icon button" data-content="qq: 819879012" data-position="bottom center"><i class="qq icon"></i></a>
+                    </div>
+                    <div class="ui wechat-qr flowing popup transition hidden" style="width: 120px;">
+                        <img class="ui rounded image" alt="wechat:rjc819879012" src="../static/images/mywechat.png" th:src="@{/images/mywechat.png}" style="width: 110px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--footer-->
+    <footer th:replace="_fragment :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/mywechat.png" class="ui rounded image" alt="" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事 (User Story) </a>
+                        <a href="#" class="item">用户故事 (User Story) </a>
+                        <a href="#" class="item">用户故事 (User Story) </a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email: 819879012@qq.com</a>
+                        <a href="#" class="item">qq: 819879012 </a>
+                        <a href="#" class="item">wechat: rjc819879012 </a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">Blog</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客,会分享关于编程,写作,思考相关的任何内容,希望可以给来到这的人有所帮助...</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">@本站创建于2020/6/20 desinged By Ren Jia Cheng</p>
+        </div>
+    </footer>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    $('.wechat').popup({
+        popup: $('.wechat-qr'),
+        position: 'bottom center'
+    });
+    $('.qq').popup();
+</script>
+</body>
+</html>
